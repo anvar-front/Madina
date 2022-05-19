@@ -4,7 +4,10 @@
 
 {% block content %}
     <div class="section-top">
-        <img src="{% static 'img/slider0.jpg' %}" class="img-responsive">
+        <img src="{% static 'img/bg_image.jpg' %}" class="img-responsive">
+        <div class="section-top__text">
+            <p>Интернет магазин <br> от Мадины</p>
+        </div>
     </div>
     <div class="section section1">
         <div class="container">
@@ -22,7 +25,7 @@
     </div>
     <div class="section section-delivery">
         <div>
-            <h3>Free shipping</h3>
+            <h3>Скоро, новое поступление!!!</h3>
         </div>
     </div>
     <div class="section section2 phones-container">
@@ -30,7 +33,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-center">
-                        Телефоны
+                        Юбки
                     </h1>
                 </div>
                 {% for product_image in products_images_phones %}
@@ -45,7 +48,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-center">
-                        Ноутбуки
+                        Платья
                     </h1>
                 </div>
                 {% for product_image in products_images_laptops %}

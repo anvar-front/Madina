@@ -138,8 +138,10 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
-#uncomment
-try:
-    from .settings_prod import *
-except:
-    pass
+# #uncomment
+# try:
+#     from .settings_prod import *
+# except:
+#     pass
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
