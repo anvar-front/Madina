@@ -3,24 +3,19 @@
 
 
 {% block content %}
-    <div class="container">
+    <div class="container" style="margin-top: 70px;">
         <div class="row">
-            <div class="col-lg-6">
-                {% for image_item in product.productimage_set.all %}
+            <div id="carousel" class="col-lg-6 carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    {% for image_item in product.productimage_set.all %}
                     <div class="product-image-item">
                         <img src="{{ image_item.image.url }}" class="img-responsive">
                     </div>
                 {% endfor %}
+                </div>
             </div>
             <div class="col-lg-6">
-                <h1 class="text-center">
-                    {{ product.name }}
-                </h1>
-                <div class="">
-                    <p>
-                        Price: {{ product.price }}
-                    </p>
-                </div>
+
                 <div>
                       <!-- Nav tabs -->
                       <ul class="nav nav-tabs" role="tablist">
@@ -50,6 +45,13 @@
                         <div role="tabpanel" class="tab-pane" id="settings">...</div>
                       </div>
                 </div>
+
+                <div class="">
+                    <p>
+                        Цена: {{ product.price }}
+                    </p>
+                </div>
+
                 <div>
                     <form id="form_buying_product" class="form-inline" action="{% url 'basket_adding' %}">{% csrf_token %}
                         <div class="form-group">
@@ -58,7 +60,7 @@
 
 
                             <div class="form-group">
-                                <button type="submit" id="submit_btn" class="btn btn-success btn-buy"
+                                <button type="submit" id="submit_btn" class="btn btn-danger btn-buy"
                                     data-product_id = "{{ product.id }}"
                                     data-name ="{{ product.name }}"
                                     data-price ="{{ product.price }}"

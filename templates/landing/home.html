@@ -4,10 +4,8 @@
 
 {% block content %}
     <div class="section-top">
-        <img src="{% static 'img/bg_image.jpg' %}" class="img-responsive">
-        <div class="section-top__text">
-            <p>Интернет магазин <br> от Мадины</p>
-        </div>
+        <img src="{% static 'img/bg_image1.jpeg' %}" class="img-responsive">
+        <p>Online shop <br> from Madina</p>
     </div>
     <div class="section section1">
         <div class="container">
@@ -17,7 +15,7 @@
                         Новые поступления
                     </h1>
                 </div>
-                {% for product_image in products_images %}
+                {% for product_image in products_image %}
                     {% include 'landing/product_item.html' %}
                 {% endfor %}
             </div>
@@ -31,29 +29,33 @@
     <div class="section section2 phones-container">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="text-center">
-                        Юбки
-                    </h1>
-                </div>
-                {% for product_image in products_images_phones %}
-                    {% include 'landing/product_item.html' %}
-                {% endfor %}
-
+                {% if products_images_phones|length > 0 %}
+                    <div class="col-lg-12">
+                        <h1 class="text-center">
+                            Юбки
+                        </h1>
+                    </div>
+                    {% for product_image in products_images_phones %}
+                        {% include 'landing/product_item.html' %}
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
     <div class="section section3 laptops-container">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="text-center">
-                        Платья
-                    </h1>
-                </div>
-                {% for product_image in products_images_laptops %}
-                    {% include 'landing/product_item.html' %}
-                {% endfor %}
+
+                {% if products_images_laptops|length > 0 %}
+                    <div class="col-lg-12">
+                        <h1 class="text-center">
+                            Платья
+                        </h1>
+                    </div>
+                    {% for product_image in products_images_laptops %}
+                        {% include 'landing/product_item.html' %}
+                    {% endfor %}
+                {% endif %}
 
             </div>
         </div>

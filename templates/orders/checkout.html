@@ -3,12 +3,12 @@
 
 
 {% block content %}
-    <div class="container">
+    <div class="container" style="padding-top: 50px;">
         <div class="row">
             {% if products_in_basket %}
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3 class="text-center">Товары в корзине</h3>
-                    <h5 class="text-center">Общая стоимость: {{ request.session.basket.total_amount }} сом </h5>
+                    <h5 class="text-center"> Валюта: {{ request.session.basket.total_amount }} сом </h5>
                             {{ request.session.basket.products }}
 
                     <form class="form-horizontal" method="post">{% csrf_token %}

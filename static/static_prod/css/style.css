@@ -20,7 +20,7 @@ html, body{
 
 .footer{
     position: relative;
-    margin-top: -180px; /* negative value of footer height */
+    margin-top: -180px; /*negative value of footer height*/
     height: 180px;
     clear: both;
     background-color: white;
@@ -62,7 +62,7 @@ html, body{
 .discount-container{
     position: absolute;
     top: 30%;
-    background: #55e073;
+    background: #5591e0;
     width: 30%;
     color: white;
     font-weight: 700;
@@ -71,7 +71,7 @@ html, body{
 
 .section-delivery{
     height: 300px;
-    background-color: darkseagreen;
+    background-color: rgb(208, 208, 208);
     text-align: center;
     color: white;
 }
@@ -97,7 +97,6 @@ html, body{
 
 .basket-container{
     position: relative;
-    width: 400px;
     padding: 15px 10px;
 }
 

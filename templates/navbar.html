@@ -1,8 +1,6 @@
 <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-top">
-    
-    </nav>
-    <nav class="navbar navbar navbar-light navbar-fixed-top" style="background-color: #e3f2fd;" >
+
+    <nav class="navbar navbar navbar-light navbar-fixed-top" style = "background: #fff; opacity: 0.9;" >
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -34,14 +32,14 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
                 <div class="basket-container">
-                    <a href="">Корзина <span id="basket_total_amount"></span><span id="basket_total_nmb">
+                    <a href="{% url 'checkout'  %}">Корзина <span id="basket_total_amount"></span><span id="basket_total_nmb">
                         {% if products_total_nmb %}
                             ({{ products_total_nmb }})
                         {% else %}
                             (0)
                         {% endif %}
                     </span></a>
-                    <div class="basket-items hidden">
+                    {% comment %} <div class="basket-items hidden">
                         <ul class="">
                             {% for product_in_basket in products_in_basket %}
                                 <li>
@@ -56,7 +54,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </li>
 
